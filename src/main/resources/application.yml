@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true #是否确认回调(需要配置回调方法)
+    publisher-returns:  true #是否返回反馈
+    listener:
+      direct:
+        acknowledge-mode: manual # 配置该消费者的ack方式为手动
+  data:
+    mongodb:
+     # uri: mongodb://localhost:27017/mongodb-rabbitmq 
+       uri: mongodb://192.168.93.131:27017/linux_mongodb
+      
+server:
+  port: 8090
